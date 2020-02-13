@@ -11,6 +11,8 @@ app.use(
   })
 );
 
+app.use("/static", express.static("static"));
+
 app.all("/*", function(req, res) {
   var path = req.path;
   if (path == "/") {
